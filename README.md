@@ -55,3 +55,6 @@ terraform init
 terraform apply
 ```
 
+#### Codepipeline to build the n8n-debian docker image and rolling deploy to ECS Service for n8n
+[code-build](https://raw.githubusercontent.com/msharma24/terraform-aws-n8n-automation-tool/main/img/codebuild.png)
+[code-pipe](https://raw.githubusercontent.com/msharma24/terraform-aws-n8n-automation-tool/main/img/code-pipeline.png)
