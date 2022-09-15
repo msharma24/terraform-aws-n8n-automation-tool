@@ -1,11 +1,19 @@
-# Terraform for n8n Automations
+# terraform-aws-n8n-automation-tool
 
-* Terraform set up that uses proper module-style code, and variables for all dynamic or configurable data, to build the following:
-* ALB
-* Aurora MySQL
-* Redis cluster mode
-* CodePipeline, triggered from a github repo.
-* CodeBuild outputting to ECR.
-* ECS + Fargate
+## Introduction
+Terraform configuration for self-hosting [n8n-io](https://github.com/n8n-io/n8n)- on AWS using ECS Fargate.
+n8n is an extendable open-source workflow automation tool.
+
+## Resources
+* VPC
+* AWS ALB
+* AWS Aurora MySQL
+* AWS Elastic Cache -Redis cluster 
+* AWS CodePipeline, triggered from a github repo.
+* AWS CodeBuild outputting to ECR container registry
+* AWS ECS - Fargate
 
 [n8n env variables](https://docs.n8n.io/hosting/environment-variables/#queues) 
+
+# Architecutre Diagram
+

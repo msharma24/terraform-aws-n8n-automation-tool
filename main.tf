@@ -110,16 +110,17 @@ resource "random_password" "aurora_mysql_master_password" {
 
 
 ################################################################################
-
-resource "aws_secretsmanager_secret" "aurora_secretmanager_secret" {
-  name = "${var.environment}-aurora-rds-secret-manager-${random_id.random_id.hex}"
-}
-
-
-resource "aws_secretsmanager_secret_version" "aurora_secretmanager_secret_value" {
-  secret_id     = aws_secretsmanager_secret.aurora_secretmanager_secret.id
-  secret_string = random_password.aurora_mysql_master_password.result
-}
+# Optional - AWS Secret Manager for RDS Password
+################################################################################
+# resource "aws_secretsmanager_secret" "aurora_secretmanager_secret" {
+#   name = "${var.environment}-aurora-rds-secret-manager-${random_id.random_id.hex}"
+# }
+#
+#
+# resource "aws_secretsmanager_secret_version" "aurora_secretmanager_secret_value" {
+#   secret_id     = aws_secretsmanager_secret.aurora_secretmanager_secret.id
+#   secret_string = random_password.aurora_mysql_master_password.result
+# }
 
 
 resource "aws_ssm_parameter" "aurora_ssm_parameter" {
