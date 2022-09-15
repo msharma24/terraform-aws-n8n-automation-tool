@@ -13,11 +13,12 @@ n8n is an extendable open-source workflow automation tool.
 * AWS CodeBuild outputting to ECR container registry
 * AWS ECS - Fargate
 
-[n8n env variables](https://docs.n8n.io/hosting/environment-variables/#queues) 
+[n8n env variables](https://docs.n8n.io/hosting/environment-variables/#queues)  for ECS Service.
 
 # Architecture Diagram
 
 
+![n8n-io](https://raw.githubusercontent.com/msharma24/terraform-aws-n8n-automation-tool/main/img/n8n.png)
 
 
 # Usage
@@ -35,7 +36,6 @@ db_name               = "n8n"
 aurora_instance_class = "db.t3.small"
 aurora_engine         = "aurora-mysql"
 aurora_engine_version = "5.7.mysql_aurora.2.10.1"
-github_connection_arn = "<GITHUB_CONNECTION_ARN_TO_AWS_CODE_TOOLS"
 
 ```
 
