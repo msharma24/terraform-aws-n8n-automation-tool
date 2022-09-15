@@ -1,0 +1,5 @@
+region                = "us-west-2"
+db_name               = "n8n"
+aurora_instance_class = "db.t3.small"
+aurora_engine         = "aurora-mysql"
+aurora_engine_version = "5.7.mysql_aurora.2.10.1"
