@@ -15,5 +15,42 @@ n8n is an extendable open-source workflow automation tool.
 
 [n8n env variables](https://docs.n8n.io/hosting/environment-variables/#queues) 
 
-# Architecutre Diagram
+# Architecture Diagram
+
+
+
+
+# Usage
+
+#### Deployment Guide
+
+- Git clone this project.
+
+- create a `terraform.tfvars` file locally 
+- `$touch terraform.tfvars` and enter the following values
+
+```
+region                = "<AWS_REGION_ID>"
+db_name               = "n8n"
+aurora_instance_class = "db.t3.small"
+aurora_engine         = "aurora-mysql"
+aurora_engine_version = "5.7.mysql_aurora.2.10.1"
+
+```
+
+Configure your [AWS access
+keys](http://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys) as
+environment variables:
+
+```
+export AWS_ACCESS_KEY_ID=(your access key id)
+export AWS_SECRET_ACCESS_KEY=(your secret access key)
+```
+
+Deploy the code:
+
+```
+terraform init
+terraform apply
+```
 
