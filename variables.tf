@@ -97,3 +97,9 @@ variable "source_repository" {
   type        = string
 
 }
+
+variable "github_connection_arn" {
+  description = "AWS Code Tools Github Org Connection ARN"
+  type        = string
+}
+

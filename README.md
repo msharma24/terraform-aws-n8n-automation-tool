@@ -35,6 +35,7 @@ db_name               = "n8n"
 aurora_instance_class = "db.t3.small"
 aurora_engine         = "aurora-mysql"
 aurora_engine_version = "5.7.mysql_aurora.2.10.1"
+github_connection_arn = "<GITHUB_CONNECTION_ARN_TO_AWS_CODE_TOOLS"
 
 ```
 
